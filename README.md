@@ -72,5 +72,3 @@ has_many :items
 belongs_to :l_category
 
 [![Image from Gyazo](https://i.gyazo.com/68638ecba44945083be43407bde4bc08.png)](https://gyazo.com/68638ecba44945083be43407bde4bc08)
-
-<a href="https://gyazo.com/68638ecba44945083be43407bde4bc08"><img src="https://i.gyazo.com/68638ecba44945083be43407bde4bc08.png" alt="Image from Gyazo" width="567"/></a>

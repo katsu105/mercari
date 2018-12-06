@@ -1,24 +1,89 @@
 # README
+## usersテーブル
+|Column|Type|Options|
+|------|----|-------|
+|id|integer|primary_key: true|
+|name|string|null: false, unique: true|
+|email|string|null: false, unique: true|
+|password|string|null: false|
+|postal_code|integer(7)|null: false|
+|prefecture|string|null: false|
+|municipality|string|null: false|
+|address|string|null: false|
+|account_number|string|null: false|
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+### Association
+- has_many :items
+- has_many :cards
 
-Things you may want to cover:
+## cardsテーブル
+|Column|Type|Options|
+|------|----|-------|
+|id|integer|primary_key: true|
+|number|string|null: false|
+|security_code|string|null: false|
+|user|references|foreign_key: true, null: false|
 
-* Ruby version
+### Association
+- belongs_to :user
 
-* System dependencies
+## itemsテーブル
+|Column|Type|Options|
+|------|----|-------|
+|id|integer|primary_key: true|
+|name|string|null: false|
+|text|string|null: false|
+|user|references|foreign_key: true, null: false|
+|brand|references|foreign_key: true, null: false|
+|l_category|references|foreign_key: true, null: false|
+|m_category|references|foreign_key: true, null: false|
+|s_category|references|foreign_key: true, null: false|
 
-* Configuration
+### Association
+- belongs_to :user
+- belongs_to :brand
+- belongs_to :s_category
+- belongs_to :m_category
+- belongs_to :l_category
 
-* Database creation
+## l_categoriesテーブル
+|Column|Type|Options|
+|------|----|-------|
+|id|integer|primary_key: true|
+|name|string|null: false, unique: true|
 
-* Database initialization
+### Association
+- has_many :items
+- has_many :m_categories
 
-* How to run the test suite
+## m_categoriesテーブル
+|Column|Type|Options|
+|------|----|-------|
+|id|integer|primary_key: true|
+|name|string|null: false, unique: true|
+|l_category|references|foreign_key: true, null: false|
 
-* Services (job queues, cache servers, search engines, etc.)
+### Association
+- has_many :items
+- belongs_to :l_category
+- has_many :s_categories
 
-* Deployment instructions
+## s_categoriesテーブル
+|Column|Type|Options|
+|------|----|-------|
+|id|integer|primary_key: true|
+|name|string|null: false, unique: true|
+|m_category|references|foreign_key: true, null: false|
 
-* ...
+### Association
+- has_many :items
+- belongs_to :m_category
+
+## brandsテーブル
+|Column|Type|Options|
+|------|----|-------|
+|id|integer|primary_key: true|
+|name|string|null: false, unique: true|
+
+### Association
+- has_many :items

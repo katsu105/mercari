@@ -3,7 +3,7 @@
 |Column|Type|Options|
 |------|----|-------|
 |id|integer|primary_key: true|
-|name|string|null: false|
+|name|string|null: false, unique: true|
 |email|string|null: false, unique: true|
 |password|string|null: false|
 |postal_code|integer(7)|null: false|
@@ -22,7 +22,7 @@
 |id|integer|primary_key: true|
 |number|string|null: false|
 |security_code|string|null: false|
-|user|references|foreign_key: true|
+|user|references|foreign_key: true, null: false|
 
 ### Association
 - belongs_to :user
@@ -33,8 +33,8 @@
 |id|integer|primary_key: true|
 |name|string|null: false|
 |text|string|null: false|
-|user|references|foreign_key: true|
-|brand|references|foreign_key: true|
+|user|references|foreign_key: true, null: false|
+|brand|references|foreign_key: true, null: false|
 |l_category|references|foreign_key: true, null: false|
 |m_category|references|foreign_key: true, null: false|
 |s_category|references|foreign_key: true, null: false|
@@ -60,7 +60,7 @@
 |Column|Type|Options|
 |------|----|-------|
 |id|integer|primary_key: true|
-|name|string|null: false|
+|name|string|null: false, unique: true|
 |l_category|references|foreign_key: true, null: false|
 
 ### Association
@@ -72,7 +72,7 @@
 |Column|Type|Options|
 |------|----|-------|
 |id|integer|primary_key: true|
-|name|string|null: false|
+|name|string|null: false, unique: true|
 |m_category|references|foreign_key: true, null: false|
 
 ### Association

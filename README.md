@@ -1,74 +1,66 @@
 # README
 ## usersテーブル
-
 |Column|Type|Options|
 |------|----|-------|
 |id|integer|primary_key: true|
 |name|string|null: false|
-|email|string|nill: false, unique: true|
-|password|string|nill: false|
+|email|string|null: false, unique: true|
+|password|string|null: false|
 
 ### Association
 has_many :items
 
 ## itemsテーブル
-
 |Column|Type|Options|
 |------|----|-------|
-|id|inteder|primary_key: true|
+|id|integer|primary_key: true|
 |name|string|null: false|
 |text|string|null: false|
-|user_id|integer|foreign_key: true|
-|brands|string|foreign_key: true|
-|l_category_id|integer|foreign_key: true|
+|user|references|foreign_key: true|
+|brand|references|foreign_key: true|
+|l_category|references|foreign_key: true|
 
 ### Association
 belongs_to :user
-belongs_to :brands
+belongs_to :brand
 belongs_to :l_category
 
-
-## l_categoryテーブル
+## l_categoriesテーブル
 |Column|Type|Options|
 |------|----|-------|
-|id|inteder|primary_key: true|
+|id|integer|primary_key: true|
 |name|string|null: false|
 
 ### Association
 has_many :items
-has_many :m_category
-has_many :brands
+has_many :m_categories
 
-## m_categoryテーブル
+## m_categoriesテーブル
 |Column|Type|Options|
 |------|----|-------|
-|id|inteder|primary_key: true|
+|id|integer|primary_key: true|
 |name|string|null: false|
-|l_category_id|string|foreign_key: true, null: false|
+|l_category|references|foreign_key: true, null: false|
 
 ### Association
 belongs_to :l_category
-has_many :s_category
+has_many :s_categories
 
-## s_categoryテーブル
+## s_categoriesテーブル
 |Column|Type|Options|
 |------|----|-------|
-|id|inteder|primary_key: true|
+|id|integer|primary_key: true|
 |name|string|null: false|
-|m_category_id|string|foreign_key: true, null: false|
-|l_category_id|string|foreign_key: true, null: false|
+|m_category|references|foreign_key: true, null: false|
 
 ### Association
-belongs_to :m_category
+belongs_to :m_categories
 
 ## brandsテーブル
 |Column|Type|Options|
 |------|----|-------|
-|id|inteder|primary_key: true|
+|id|integer|primary_key: true|
 |name|string|null: false|
 
 ### Association
 has_many :items
-belongs_to :l_category
-
-[![Image from Gyazo](https://i.gyazo.com/68638ecba44945083be43407bde4bc08.png)](https://gyazo.com/68638ecba44945083be43407bde4bc08)

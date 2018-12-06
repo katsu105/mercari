@@ -35,7 +35,9 @@
 |text|string|null: false|
 |user|references|foreign_key: true|
 |brand|references|foreign_key: true|
-|l_category|references|foreign_key: true|
+|l_category|references|foreign_key: true, null: false|
+|m_category|references|foreign_key: true, null: false|
+|s_category|references|foreign_key: true, null: false|
 
 ### Association
 - belongs_to :user
@@ -48,7 +50,7 @@
 |Column|Type|Options|
 |------|----|-------|
 |id|integer|primary_key: true|
-|name|string|null: false|
+|name|string|null: false, unique: true|
 
 ### Association
 - has_many :items
@@ -75,13 +77,13 @@
 
 ### Association
 - has_many :items
-- belongs_to :m_categories
+- belongs_to :m_category
 
 ## brandsテーブル
 |Column|Type|Options|
 |------|----|-------|
 |id|integer|primary_key: true|
-|name|string|null: false|
+|name|string|null: false, unique: true|
 
 ### Association
 - has_many :items

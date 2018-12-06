@@ -6,9 +6,15 @@
 |name|string|null: false|
 |email|string|null: false, unique: true|
 |password|string|null: false|
+|postal_code|integer(7)|null: false|
+|Prefecture|string|null: false|
+|Municipality|string|null: false|
+|address|string|null: false|
+|account_number|string|null: false|
+|credit_card_number|string|null: false|
 
 ### Association
-has_many :items
+- has_many :items
 
 ## itemsテーブル
 |Column|Type|Options|
@@ -21,9 +27,9 @@ has_many :items
 |l_category|references|foreign_key: true|
 
 ### Association
-belongs_to :user
-belongs_to :brand
-belongs_to :l_category
+- belongs_to :user
+- belongs_to :brand
+- belongs_to :l_category
 
 ## l_categoriesテーブル
 |Column|Type|Options|
@@ -32,8 +38,8 @@ belongs_to :l_category
 |name|string|null: false|
 
 ### Association
-has_many :items
-has_many :m_categories
+- has_many :items
+- has_many :m_categories
 
 ## m_categoriesテーブル
 |Column|Type|Options|
@@ -43,8 +49,8 @@ has_many :m_categories
 |l_category|references|foreign_key: true, null: false|
 
 ### Association
-belongs_to :l_category
-has_many :s_categories
+- belongs_to :l_category
+- has_many :s_categories
 
 ## s_categoriesテーブル
 |Column|Type|Options|
@@ -54,7 +60,7 @@ has_many :s_categories
 |m_category|references|foreign_key: true, null: false|
 
 ### Association
-belongs_to :m_categories
+- belongs_to :m_categories
 
 ## brandsテーブル
 |Column|Type|Options|
@@ -63,4 +69,4 @@ belongs_to :m_categories
 |name|string|null: false|
 
 ### Association
-has_many :items
+- has_many :items

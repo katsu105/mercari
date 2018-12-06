@@ -7,8 +7,8 @@
 |email|string|null: false, unique: true|
 |password|string|null: false|
 |postal_code|integer(7)|null: false|
-|Prefecture|string|null: false|
-|Municipality|string|null: false|
+|prefecture|string|null: false|
+|municipality|string|null: false|
 |address|string|null: false|
 |account_number|string|null: false|
 |credit_card_number|string|null: false|

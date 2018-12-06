@@ -11,10 +11,21 @@
 |municipality|string|null: false|
 |address|string|null: false|
 |account_number|string|null: false|
-|credit_card_number|string|null: false|
 
 ### Association
 - has_many :items
+- has_many :cards
+
+## cardsテーブル
+|Column|Type|Options|
+|------|----|-------|
+|id|integer|primary_key: true|
+|number|string|null: false|
+|security_code|string|null: false|
+|user|references|foreign_key: true|
+
+### Association
+- belongs_to :user
 
 ## itemsテーブル
 |Column|Type|Options|
@@ -29,6 +40,8 @@
 ### Association
 - belongs_to :user
 - belongs_to :brand
+- belongs_to :s_category
+- belongs_to :m_category
 - belongs_to :l_category
 
 ## l_categoriesテーブル
@@ -49,6 +62,7 @@
 |l_category|references|foreign_key: true, null: false|
 
 ### Association
+- has_many :items
 - belongs_to :l_category
 - has_many :s_categories
 
@@ -60,6 +74,7 @@
 |m_category|references|foreign_key: true, null: false|
 
 ### Association
+- has_many :items
 - belongs_to :m_categories
 
 ## brandsテーブル

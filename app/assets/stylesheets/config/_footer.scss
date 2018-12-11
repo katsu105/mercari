@@ -1,0 +1,60 @@
+@import "config/colors";
+
+footer {
+  nav {
+    width: 1020px;
+    margin: 0 auto;
+  ul {
+    list-style: none;
+  }
+  li {
+    margin: 24px 0 0;
+  }
+  a {
+    color:$white;
+    text-decoration: none;
+      }
+    }
+  }
+  .footer__grobal {
+    padding: 60px 0;
+    text-align: center;
+    background: $footer-back;
+    color: $white;
+  }
+  
+  
+  .footer__contents {
+    display: inline-block;
+    width: 22%;
+    margin: 0 2% 0 0;
+    vertical-align: top;
+  }
+  
+  .footer__contents--title {
+    color: $white;
+    font-size: 16px;
+    line-height: 1.4;
+    font-weight: normal;
+    display: block;
+    font-weight: bold;
+  }
+  
+  .footer__contents--title img {
+      margin: 0 8px 0 0;
+      vertical-align: middle;
+    }
+  
+  
+  
+  // footer_ロゴ部分
+  .footer__logo {
+    display: block;
+    margin: 40px 0 0;
+    text-align: center;
+    // width: 124px;
+    // height: 33px;
+    a{
+    color :$white;
+    }
+  }

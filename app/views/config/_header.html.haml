@@ -1,0 +1,40 @@
+%header.header__contents
+  .header__container
+    .clearfix
+      %h1.header__logo
+        = link_to "/" do
+          = image_tag("//www-mercari-jp.akamaized.net/assets/img/common/common/logo.svg?819506670")
+      %form{class: "header__form l-right"}
+        %input{type: "search", name: "keyword", placeholder: "キーワードから探す", class:"header__input"}
+        %i.fa.fa-search.icon-search
+    .header__nav.clearfix
+      %nav.l-left
+        %ul.header__left-menu
+          %li.l-left<
+            %h2.l-left
+              %a.header__nav--category
+                カテゴリーから探す
+          %li.l-left<
+            %h2.l-left
+              %a.header__nav--brand
+                ブランドから探す
+      .header__nav-right.l-right
+        %ul
+          %li
+            = link_to "#", class: "header__nav--root" do
+              .header__nav--user-i.l-left
+                = image_tag("//static-mercari-jp-imgtr2.akamaized.net/images/member_photo_noimage_thumb.png", width: "32", class: "header__nav--user-icon")
+              .header__nav--user-text.l-left
+                マイページ
+          %li
+            = link_to "#", class: "header__nav--root" do
+              .header__nav--user-i.l-left
+                %i.fa.fa-bell
+              .header__nav--user-text.l-left
+                お知らせ
+          %li
+            = link_to "#", class: "header__nav--root" do
+              .header__nav--user-i.l-left
+                %i.fa.fa-check
+              .header__nav--user-text.l-left
+                やることリスト

@@ -1,0 +1,260 @@
+// header
+= render partial: "config/header" 
+
+// top-banner
+.top-banner
+  .top-banner__box
+    .top-banner__contents 
+      %h2
+        スマホでかんたん
+        %br
+        フリマアプリ
+      %p
+        メルカリはスマホカメラからすぐに出品できる
+        %br
+        購入時も安心な独自システムのアプリです
+      
+      .top-banner__contents--store.clearfix
+        %a
+          = image_tag("//www-mercari-jp.akamaized.net/assets/img/common/common/app-store.svg?819506670")
+        %a
+          = image_tag("//www-mercari-jp.akamaized.net/assets/img/common/common/google-play.svg?819506670")
+        
+    = image_tag("//www-mercari-jp.akamaized.net/assets/img/common/jp/top/main_content_pc.png?819506670", class: "top-banner-image")
+
+// main
+%main.main__pickup-container
+  %h2.main__pickup-head
+    ピックアップカテゴリー
+
+  // レディース新着
+  .main__items.clearfix
+    %h3.main__items--center-text
+      レディース新着アイテム
+    .main__items-container.clearfix
+      .main__items-box
+        .main__items-box--img
+          = image_tag("https://static-mercari-jp-imgtr2.akamaized.net/thumb/photos/m96316226986_1.jpg?1543710468", class: "box--image")
+        .main__items-box--text
+          %h3.main__items-box--title.font-2
+            タイトル
+          .main__items-box--num.clearfix
+            .main__items-box--price.l-left.font-5
+              ¥8888
+            %p.main__items-box--tax
+              (税込)
+
+      .main__items-box
+        .main__items-box--img
+          = image_tag("https://static-mercari-jp-imgtr2.akamaized.net/thumb/photos/m96316226986_1.jpg?1543710468", class: "box--image")
+        .main__items-box--text
+          %h3.main__items-box--title.font-2
+            タイトル
+          .main__items-box--num.clearfix
+            .main__items-box--price.l-left.font-5
+              ¥3500
+            %p.main__items-box--tax
+              (税込)
+
+      .main__items-box
+        .main__items-box--img
+          = image_tag("https://static-mercari-jp-imgtr2.akamaized.net/thumb/photos/m96316226986_1.jpg?1543710468", class: "box--image")
+        .main__items-box--text
+          %h3.main__items-box--title.font-2
+            タイトル
+          .main__items-box--num.clearfix
+            .main__items-box--price.l-left.font-5
+              ¥3500
+            %p.main__items-box--tax
+              (税込)
+
+      .main__items-box
+        .main__items-box--img
+          = image_tag("https://static-mercari-jp-imgtr2.akamaized.net/thumb/photos/m96316226986_1.jpg?1543710468", class: "box--image")
+        .main__items-box--text
+          %h3.main__items-box--title.font-2
+            タイトル
+          .main__items-box--num.clearfix
+            .main__items-box--price.l-left.font-5
+              ¥3500
+            %p.main__items-box--tax
+              (税込)
+
+    .view-all
+      すべての商品を見る
+
+    //メンズ新着
+          
+    .main__items.clearfix
+    %h3.main__items--center-text
+      メンズ新着アイテム
+    .main__items-container.clearfix
+      .main__items-box
+        .main__items-box--img
+          = image_tag("https://static-mercari-jp-imgtr2.akamaized.net/thumb/photos/m96316226986_1.jpg?1543710468", class: "box--image")
+        .main__items-box--text
+          %h3.main__items-box--title.font-2
+            タイトル
+          .main__items-box--num.clearfix
+            .main__items-box--price.l-left.font-5
+              ¥3500
+            %p.main__items-box--tax
+              (税込)
+
+      .main__items-box
+        .main__items-box--img
+          = image_tag("https://static-mercari-jp-imgtr2.akamaized.net/thumb/photos/m96316226986_1.jpg?1543710468", class: "box--image")
+        .main__items-box--text
+          %h3.main__items-box--title.font-2
+            タイトル
+          .main__items-box--num.clearfix
+            .main__items-box--price.l-left.font-5
+              ¥3500
+            %p.main__items-box--tax
+              (税込)
+
+      .main__items-box
+        .main__items-box--img
+          = image_tag("https://static-mercari-jp-imgtr2.akamaized.net/thumb/photos/m96316226986_1.jpg?1543710468", class: "box--image")
+        .main__items-box--text
+          %h3.main__items-box--title.font-2
+            タイトル
+          .main__items-box--num.clearfix
+            .main__items-box--price.l-left.font-5
+              ¥3500
+            %p.main__items-box--tax
+              (税込)
+
+      .main__items-box
+        .main__items-box--img
+          = image_tag("https://static-mercari-jp-imgtr2.akamaized.net/thumb/photos/m96316226986_1.jpg?1543710468", class: "box--image")
+        .main__items-box--text
+          %h3.main__items-box--title.font-2
+            タイトル
+          .main__items-box--num.clearfix
+            .main__items-box--price.l-left.font-5
+              ¥3500
+            %p.main__items-box--tax
+              (税込)
+
+    .view-all
+      すべての商品を見る
+
+    // ベビー・キッズ
+  
+    .main__items.clearfix
+    %h3.main__items--center-text
+      ベビー・キッズ新着アイテム
+    .main__items-container.clearfix
+      .main__items-box
+        .main__items-box--img
+          = image_tag("https://static-mercari-jp-imgtr2.akamaized.net/thumb/photos/m96316226986_1.jpg?1543710468", class: "box--image")
+        .main__items-box--text
+          %h3.main__items-box--title.font-2
+            タイトル
+          .main__items-box--num.clearfix
+            .main__items-box--price.l-left.font-5
+              ¥3500
+            %p.main__items-box--tax
+              (税込)
+
+      .main__items-box
+        .main__items-box--img
+          = image_tag("https://static-mercari-jp-imgtr2.akamaized.net/thumb/photos/m96316226986_1.jpg?1543710468", class: "box--image")
+        .main__items-box--text
+          %h3.main__items-box--title.font-2
+            タイトル
+          .main__items-box--num.clearfix
+            .main__items-box--price.l-left.font-5
+              ¥3500
+            %p.main__items-box--tax
+              (税込)
+
+      .main__items-box
+        .main__items-box--img
+          = image_tag("https://static-mercari-jp-imgtr2.akamaized.net/thumb/photos/m96316226986_1.jpg?1543710468", class: "box--image")
+        .main__items-box--text
+          %h3.main__items-box--title.font-2
+            タイトル
+          .main__items-box--num.clearfix
+            .main__items-box--price.l-left.font-5
+              ¥3500
+            %p.main__items-box--tax
+              (税込)
+
+      .main__items-box
+        .main__items-box--img
+          = image_tag("https://static-mercari-jp-imgtr2.akamaized.net/thumb/photos/m96316226986_1.jpg?1543710468", class: "box--image")
+        .main__items-box--text
+          %h3.main__items-box--title.font-2
+            タイトル
+          .main__items-box--num.clearfix
+            .main__items-box--price.l-left.font-5
+              ¥3500
+            %p.main__items-box--tax
+              (税込)
+
+    .view-all
+      すべての商品を見る
+
+    // コスメ・香水・美容新着アイテム
+    .main__items.clearfix
+    %h3.main__items--center-text
+      コスメ・香水・美容新着アイテム
+    .main__items-container.clearfix
+      .main__items-box
+        .main__items-box--img
+          = image_tag("https://static-mercari-jp-imgtr2.akamaized.net/thumb/photos/m96316226986_1.jpg?1543710468", class: "box--image")
+        .main__items-box--text
+          %h3.main__items-box--title.font-2
+            タイトル
+          .main__items-box--num.clearfix
+            .main__items-box--price.l-left.font-5
+              ¥3500
+            %p.main__items-box--tax
+              (税込)
+
+      .main__items-box
+        .main__items-box--img
+          = image_tag("https://static-mercari-jp-imgtr2.akamaized.net/thumb/photos/m96316226986_1.jpg?1543710468", class: "box--image")
+        .main__items-box--text
+          %h3.main__items-box--title.font-2
+            タイトル
+          .main__items-box--num.clearfix
+            .main__items-box--price.l-left.font-5
+              ¥3500
+            %p.main__items-box--tax
+              (税込)
+
+      .main__items-box
+        .main__items-box--img
+          = image_tag("https://static-mercari-jp-imgtr2.akamaized.net/thumb/photos/m96316226986_1.jpg?1543710468", class: "box--image")
+        .main__items-box--text
+          %h3.main__items-box--title.font-2
+            タイトル
+          .main__items-box--num.clearfix
+            .main__items-box--price.l-left.font-5
+              ¥3500
+            %p.main__items-box--tax
+              (税込)
+
+      .main__items-box
+        .main__items-box--img
+          = image_tag("https://static-mercari-jp-imgtr2.akamaized.net/thumb/photos/m96316226986_1.jpg?1543710468", class: "box--image")
+        .main__items-box--text
+          %h3.main__items-box--title.font-2
+            タイトル
+          .main__items-box--num.clearfix
+            .main__items-box--price.l-left.font-5
+              ¥3500
+            %p.main__items-box--tax
+              (税込)
+
+    .view-all
+      すべての商品を見る
+
+// app-banner
+= render partial: "config/app-banner"
+
+//footer
+=render partial: "config/footer"

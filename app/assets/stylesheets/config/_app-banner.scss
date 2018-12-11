@@ -1,0 +1,72 @@
+aside {
+  background: url(https://image.freepik.com/free-photo/no-translate-detected_1253-1328.jpg);
+  background-position: center;
+  background-size: cover;
+  position: relative;
+  height: 100%;
+
+}
+
+.app-banner {
+overflow: hidden;
+position: relative;
+display: block;
+width: 750px;
+height: 260px;
+margin: 0 auto;
+color: #fff;
+}
+
+.app-banner figure {
+position: absolute;
+top: 0;
+right: 0;
+bottom: 0;
+width: 300px;
+height: 100%;
+}
+
+.app-banner figure img {
+margin-left: 50px;
+width: 100%;
+vertical-align: middle;
+}
+
+.app-banner__contents {
+position: absolute;
+top: 50%;
+transform: translate(0, -50%);
+left: 0;
+h2 {
+  text-shadow: 0 0 5px rgba(0,0,0,0.4);
+  font-size: 24px;
+  line-height: 1.4;
+  font-weight: bold;
+}
+}
+
+.app-banner__contents p {
+  text-shadow: 0 0 5px rgba(0,0,0,0.4);
+  font-size: 35px;
+  margin: 10px 0 0;
+}
+
+.app-banner__logos {
+  margin: 20px 0 0;
+  float: left;
+  ul {
+    float: right;
+    margin: 0 0 0 24px;
+    line-height: 68px;
+    vertical-align: middle;
+  li {
+    float: left;
+    margin: 0 0 0 16px;
+    }
+  }
+}
+
+.app-banner__logos--mercari {
+  width: 68px;
+  vertical-align: middle;
+}

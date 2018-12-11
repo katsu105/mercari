@@ -1,7 +1,9 @@
-.clearfix::after{
-  content: "";
-  display: block;
-  clear: both;
+@import "clearfix";
+@import "font2";
+@import "font5";
+
+.clearfix{
+  @include clearfix();
 }
 .l-right {
   float: right;
@@ -11,13 +13,9 @@
 }
 
 .font-2 {
-  font-size: 16px;
-  font-weight: 400;
-  color: #333;
+  @include font2();
 }
 
 .font-5 {
-  font-size: 20px;
-  font-weight: 600;
-  color: #333;
+  @include font5();
 }

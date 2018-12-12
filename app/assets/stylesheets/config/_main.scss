@@ -1,34 +1,39 @@
 @import "config/colors";
 
-.main__pickup-container {
-  padding: 40px 0;
-  background-color: $main-back;
+.main {
+  &__pickup-container {
+    padding: 40px 0;
+    background-color: $main-back;
+  }
+
+  &__pickup-head {
+    font-size: 28px;
+    text-align: center;
+    line-height: 1.4; 
+  }
 }
 
-.main__pickup-head {
-  font-size: 28px;
-  text-align: center;
-  line-height: 1.4;
+
+.main {
+  &__items {
+    width: 940px;
+    margin: 0 auto;
+
+    &--center-text {
+      font-size: 22px;
+      margin: 26px 11px;
+      text-align: center;
+      color: $items-text;
+    }
+
+    &-container {
+      width: 940px;
+      margin: 0 auto;
+    }
+  }
+
 }
 
-.main__items {
-  width: 940px;
-  margin: 0 auto;
-}
-
-.main__items--center-text {
-  font-size: 22px;
-  margin: 26px 11px;
-  text-align: center;
-  color: $items-text;
-}
-
-.main__items-container {
-  width: 940px;
-  margin: 0 auto;
-}
-
-//main_itembox内
 
 .main__items-box {
   margin: 0 0 0 20px;
@@ -36,13 +41,12 @@
   position: relative;
   float: left;
   background-color: $white;
-}
-
-.main__items-box--img {
-  width: 213px;
-  height: 220px;
-  overflow: hidden;
-  position: relative;
+    &--img {
+      width: 213px;
+      height: 220px;
+      overflow: hidden;
+      position: relative;
+    }
 }
 
 .box--image {
@@ -51,32 +55,34 @@
   opacity: 1;
 }
 
-.main__items-box--text {
-  padding: 16px;
-  height: 110px;
-}
+.main__items-box {
+  &--text {
+    padding: 16px;
+    height: 110px;
+  }
 
-.main__items-box--title {
-  overflow: hidden;
-  position: relative;
-  font-weight: 400;
-  height: 3em;
-  line-height: 1.5;
-  word-break: break-word;
-  white-space: normal;
-}
+  &--title {
+    overflow: hidden;
+    position: relative;
+    font-weight: 400;
+    height: 3em;
+    line-height: 1.5;
+    word-break: break-word;
+    white-space: normal;
+  }
 
-.main__items-box--num {
-  margin: 8px 0 0;
-}
+  &--num {
+    margin: 8px 0 0;
+  }
 
-.main__items-box--price {
-  font-size: 20px;
-}
+  &--price {
+    font-size: 20px;
+  }
 
-.main__items-box--tax {
-  font-size: 10px;
+  &--tax {
+    font-size: 10px;
   clear: both;
+  }
 }
 
 .view-all {

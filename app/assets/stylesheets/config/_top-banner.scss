@@ -4,47 +4,45 @@
   display: block;
   background: url(https://image.freepik.com/free-photo/no-translate-detected_1253-1328.jpg);
   background-size: cover;
-}
 
-  .top-banner__box {
+  &__box {
     max-width: 860px;
     position: relative;
     height: 100%;
     margin: 0 auto; 
-}
-
-.top-banner__contents {
-  position: absolute;
-  top: 50%;
-  left: 0;
-  transform: translate(0, -50%);
-  h2 {
-    font-size: 60px;
-    line-height: 1.2;
-    font-weight: bold;
   }
-}
-  
-.top-banner__contents p {
-    font-size: 18px;
-    margin: 16px 0 0;
-    line-height: 1.77778;
-}
 
-.top-banner__contents--store {
-  margin: 24px 0 0;
-  line-height: 0;
-  a {
-    width: 170px;
-    height: 50px;
-    display: inline-block;
+  &__contents {
+    position: absolute;
+    top: 50%;
+    left: 0;
+    transform: translate(0, -50%);
+    h2 {
+      font-size: 60px;
+      line-height: 1.2;
+      font-weight: bold;
+    }
+    p {
+      font-size: 18px;
+      margin: 16px 0 0;
+      line-height: 1.77778;
+    }
+    &--store {
+      margin: 24px 0 0;
+      line-height: 0;
+      a {
+        width: 170px;
+        height: 50px;
+        display: inline-block;
+      }
+    }
   }
-}
 
-.top-banner-image {
-  position: absolute;
-  top: 0;
-  right: 0;
-  height: 100%;
-  width: auto;
+  &-image {
+    position: absolute;
+    top: 0;
+    right: 0;
+    height: 100%;
+    width: auto;
+  }
 }

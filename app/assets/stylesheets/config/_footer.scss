@@ -14,45 +14,42 @@ footer {
       }
     }
   }
-  .footer__grobal {
+
+.footer {
+  &__grobal {
     padding: 60px 0;
     text-align: center;
     background: $footer-back;
     color: $white;
   }
-  
-  
-  .footer__contents {
+
+  &__contents {
     display: inline-block;
     width: 22%;
     margin: 0 2% 0 0;
     vertical-align: top;
-  }
-  
-  .footer__contents--title {
-    color: $white;
-    font-size: 16px;
-    line-height: 1.4;
-    font-weight: normal;
-    display: block;
-    font-weight: bold;
-  }
-  
-  .footer__contents--title img {
-      margin: 0 8px 0 0;
-      vertical-align: middle;
+
+    &--title {
+      color: $white;
+      font-size: 16px;
+      line-height: 1.4;
+      font-weight: normal;
+      display: block;
+      font-weight: bold;
+      img {
+        margin: 0 8px 0 0;
+        vertical-align: middle;
+      }
     }
-  
-  
-  
-  // footer_ロゴ部分
-  .footer__logo {
+  }
+
+  // footerロゴ部分
+  &__logo {
     display: block;
     margin: 40px 0 0;
     text-align: center;
-    // width: 124px;
-    // height: 33px;
-    a{
-    color :$white;
+    a {
+      color: $white;
     }
   }
+}

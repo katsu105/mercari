@@ -1,5 +1,3 @@
-@import "config/colors";
-
 .header__contents {
   position: relative;
   z-index: 1001;
@@ -45,10 +43,10 @@
  // header下部
  .header__nav {
    margin: 8px 0 0;
-   &h2 {
+   h2 {
    font-size: 14px;
    font-weight: 400;
-   &a {
+   a {
      display: block;
      color: $black;
    }

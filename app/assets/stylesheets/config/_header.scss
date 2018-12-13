@@ -1,0 +1,109 @@
+.header {
+  &__contents {
+    position: relative;
+    z-index: 1001;
+    background: $white;
+  }
+
+  &__container {
+    width: 1020px;
+    margin: 0 auto;
+    padding: 8px 0 0;
+  }
+
+  &__logo {
+    float: left;
+    width: 134px;
+    height: 36px; 
+  }
+
+  &__form {
+    position: relative;
+    width: calc(100% - (134px + 16px));
+  }
+
+  &__input {
+    width: 100%;
+    height: 36px;
+    padding: 9px 32px 9px 8px;
+    background: $header-input;
+    border-radius: 4px;
+    border: 1px solid $header-input-border;
+    line-height: 1.5;
+    font-size: 16px;
+  }
+}
+ 
+ .icon-search {
+   position: absolute;
+   top: 0;
+   right: 0;
+   width: 36px;
+   line-height: 36px !important;
+   cursor: pointer;
+   text-align: center;
+ }
+ 
+ // header下部
+ .header__nav {
+   margin: 8px 0 0;
+   h2 {
+   font-size: 14px;
+   font-weight: 400;
+   a {
+     display: block;
+     color: $black;
+    }
+  }
+  &-left {
+    float: left;
+  }
+
+  &--category {
+    position: relative;
+    height: 38px;
+    line-height: 32px;
+  }
+
+  &--brand {
+    position: relative;
+    height: 38px;
+    line-height: 32px;
+    display: inline-block;
+    padding: 0 0 0 16px;
+  }
+
+  // header下部
+
+  &-right {
+    li {
+      position: relative;
+      display: inline-block;
+      padding: 0 0 0 16px;
+      vertical-align: middle;
+    }
+  }
+
+  &--root {
+    position: relative;
+    height: 38px;
+    line-height: 32px;
+    color: $black;
+  }
+
+  &--user-icon {
+    opacity: 1;
+    vertical-align: middle;
+  }
+
+  &--user-text {
+    display: inline-block;
+    margin: 0 0 0 8px;
+    font-size: 14px;
+    vertical-align: middle;
+  }
+}
+ 
+ ul {
+   list-style: none;
+ }

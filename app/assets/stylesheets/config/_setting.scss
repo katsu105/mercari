@@ -1,0 +1,21 @@
+@import "clearfix";
+@import "font2";
+@import "font5";
+
+.clearfix{
+  @include clearfix();
+}
+.l-right {
+  float: right;
+}
+.l-left {
+  float: left;
+}
+
+.font-2 {
+  @include font2();
+}
+
+.font-5 {
+  @include font5();
+}

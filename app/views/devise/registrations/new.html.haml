@@ -1,0 +1,44 @@
+.single
+  %header.header
+    %h1
+      = link_to "/" do
+        = image_tag("//www-mercari-jp.akamaized.net/assets/img/common/common/logo.svg?819506670")
+
+  %main.single-main
+    .single-main__contents
+      %h2.single-main__title
+        新規会員登録
+      .single-main__box
+        .single-main__inner
+          = link_to "#", class: "btn-mail btn-defalt" do
+            = fa_icon 'envelope', class: "icon icon-mail"
+            メールアドレスで登録
+
+          %button#facebook-login.btn-defalt.btn-sns.btn-sns-facebook
+            = fa_icon 'facebook', class: "icon icon-facebook"
+            facebookで登録
+
+          %button#google-login.btn-defalt.btn-sns.btn-sns-google
+            = fa_icon 'google-plus-g', class: "icon icon-google"
+            googleで登録
+
+  %footer.single-footer
+    %nav
+      %ul.clearfix
+        %li
+          = link_to "#" do
+            プライバシーポリシー
+        %li
+          = link_to "#" do
+            メルカリ利用規約
+        %li
+          = link_to "#" do
+            特定商取引に関する表記
+
+
+    = link_to "#", class:"single-footer__logo" do
+      = image_tag("//www-mercari-jp.akamaized.net/assets/img/common/common/logo-gray.svg?1105410189", alt: "mercari", width: 80, height: 65)
+
+    %p
+      %small
+        © 2018 Mercari

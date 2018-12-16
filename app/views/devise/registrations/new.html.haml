@@ -1,0 +1,16 @@
+.single
+  = render partial: "config/single-header" 
+
+  %main.single-main
+    .single-main__contents
+      %h2.single-main__title
+        新規会員登録
+      .single-main__box
+        .single-main__inner
+          = link_to "#", class: "btn-mail btn-defalt" do
+            = fa_icon 'envelope', class: "icon icon-mail"
+            メールアドレスで登録
+
+          = render partial: "config/single-btn"
+
+  = render partial: "config/single-footer"

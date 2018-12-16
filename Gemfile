@@ -69,3 +69,8 @@ gem 'font-awesome-rails'
 # devise
 gem 'devise'
 
+#S3導入
+gem 'carrierwave'
+gem 'fog-aws'
+gem 'mini_magick'
+

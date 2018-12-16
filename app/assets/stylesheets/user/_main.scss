@@ -48,7 +48,7 @@
     }
     &-facebook {
       margin: 16px 0 0;
-      background: #385185;
+      background: $facebook;
       color: $white;
     }
     &-google {
@@ -70,7 +70,7 @@
   }
   &-facebook {
     color: $white;
-    background: #385185;
+    background: $facebook;
     font-size: 18px;
   }
   &-google {

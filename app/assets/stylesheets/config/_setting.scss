@@ -19,3 +19,7 @@
 .font-5 {
   @include font5();
 }
+
+a{
+  text-decoration: none;
+}

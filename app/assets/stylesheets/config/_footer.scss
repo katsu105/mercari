@@ -1,26 +1,23 @@
-footer {
-  nav {
-    width: 1020px;
-    margin: 0 auto;
-  ul {
-    list-style: none;
-  }
-  li {
-    margin: 24px 0 0;
-  }
-  a {
-    color:$white;
-    text-decoration: none;
-      }
-    }
-  }
-
 .footer {
   &__grobal {
     padding: 60px 0;
     text-align: center;
     background: $footer-back;
     color: $white;
+    nav {
+      width: 1020px;
+      margin: 0 auto;
+    ul {
+      list-style: none;
+    }
+    li {
+      margin: 24px 0 0;
+    }
+    a {
+      color:$white;
+      text-decoration: none;
+        }
+      }
   }
 
   &__contents {

@@ -2,6 +2,10 @@
 @import "font2";
 @import "font5";
 
+
+body {
+  background: $main-back;
+}
 .clearfix{
   @include clearfix();
 }

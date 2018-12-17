@@ -19,4 +19,87 @@
 @import "user/signin";
 
 
+.bread-crumbs {
+  position: relative;
+  border-top: 1px solid #eee;
+  box-shadow: 0 3px 3px 0 rgba(0,0,0,0.16);
+  background: $white;
+  ul {
+    width: 1020px;
+    overflow: visible;
+    margin: 0 auto;
+    padding: 17px 0 16px;
+    white-space: normal;
+  }
+  li {
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    display: inline-block;
+    font-size: 14px;
+    line-height: 1.2;
+  }
+  .icon-angle-right {
+    margin: 0 8px;
+    font-size: 9px;
+    color: #888;
+  }
+}
+
+.mypage-main {
+  background: $main-back;
+  margin: 40px auto 0;
+  width: 1020px;
+  padding: 0 0 40px;
+  &__l-contents {
+    float: right;
+    width: 700px;
+  }
+  &__inner {
+    margin: 0;
+    background: $white;
+    &-box {
+      padding: 64px;
+      border-top: 1px solid #f5f5f5;
+      &--content {
+        max-width: 320px;
+        margin: 0 auto;
+      }
+    }
+  }
+  &__sidebar {
+    float: left;
+    width: 280px;
+    margin: 0 40px 0 0;
+    li {
+    border-top: 1px solid #eee;
+    }
+    &-nav{
+    &--title {
+      margin: 40px 0 0;
+      font-size: 16px;
+      font-weight: bold;
+    }
+    &__list--item {
+      position: relative;
+      display: block;
+      min-height: 18px;
+      padding: 16px;
+      background: #fff;
+      color: #333;
+      .icon-angle-right {
+        position: absolute;
+        top: 50%;
+        right: 16px;
+        color: #ccc;
+        }
+      }
+    }
+  }
+}
+
+.logout {
+  background: #eee !important;
+  font-weight: 600 !important;
+}
+
   

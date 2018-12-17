@@ -1,17 +1,13 @@
-.single {
-  background: $main-back;
-  }
-  
-  .header {
-    height: 128px;
-    text-align: center;
-    h1 {
-      display: inline-block;
-      margin: 40px 0 0;
-    img {
-      width: 185px;
-      height: 49px;
-      vertical-align: middle;
-      }
+.header {
+  height: 128px;
+  text-align: center;
+  h1 {
+    display: inline-block;
+    margin: 40px 0 0;
+  img {
+    width: 185px;
+    height: 49px;
+    vertical-align: middle;
     }
   }
+}

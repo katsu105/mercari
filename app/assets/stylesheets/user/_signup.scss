@@ -21,44 +21,6 @@
   }
 }
 
-.btn {
-  &-defalt {
-    display: block;
-    width: 100%;
-    line-height: 48px;
-    font-size: 14px;
-    border: 1px solid transparent;
-    transition: all ease-out .3s;
-    cursor: pointer;
-    text-align: center;
-  }
-
-  &-mail {
-    position: relative;
-    background: #eee;
-    color: #000;
-  }
-  &-sns {
-    position: relative;
-    i {
-      position: absolute;
-      top: 50%;
-      left: 16px;
-      transform: translate(0, -50%);
-    }
-    &-facebook {
-      margin: 16px 0 0;
-      background: $facebook;
-      color: $white;
-    }
-    &-google {
-      margin: 16px 0 0;
-      background: $google;
-      color: $white;
-    }
-  }
-}
-
 .icon {
   &-mail {
     position: absolute;

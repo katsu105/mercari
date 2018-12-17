@@ -1,6 +1,6 @@
 .bread-crumbs {
   position: relative;
-  border-top: 1px solid #eee;
+  border-top: 1px solid $thin-gray;
   box-shadow: 0 3px 3px 0 rgba(0,0,0,0.16);
   background: $white;
   ul {
@@ -16,6 +16,9 @@
     display: inline-block;
     font-size: 14px;
     line-height: 1.2;
+  }
+  a {
+    color: $black;
   }
   .icon-angle-right {
     margin: 0 8px;

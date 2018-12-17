@@ -4,7 +4,7 @@
     width: 280px;
     margin: 0 40px 0 0;
     li {
-    border-top: 1px solid #eee;
+    border-top: 1px solid $thin-gray;
     }
     &-nav{
     &--title {
@@ -17,13 +17,13 @@
       display: block;
       min-height: 18px;
       padding: 16px;
-      background: #fff;
-      color: #333;
+      background: $white;
+      color: $black;
       .icon-angle-right {
         position: absolute;
         top: 50%;
         right: 16px;
-        color: #ccc;
+        color: $gray;
         }
       }
     }
@@ -31,6 +31,6 @@
 }
 
 .logout {
-background: #eee !important;
+background: $thin-gray !important;
 font-weight: 600 !important;
 }

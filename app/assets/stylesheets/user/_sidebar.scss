@@ -1,0 +1,36 @@
+.mypage-main {
+  &__sidebar {
+    float: left;
+    width: 280px;
+    margin: 0 40px 0 0;
+    li {
+    border-top: 1px solid $thin-gray;
+    }
+    &-nav{
+    &--title {
+      margin: 40px 0 0;
+      font-size: 16px;
+      font-weight: bold;
+    }
+    &__list--item {
+      position: relative;
+      display: block;
+      min-height: 18px;
+      padding: 16px;
+      background: $white;
+      color: $black;
+      .icon-angle-right {
+        position: absolute;
+        top: 50%;
+        right: 16px;
+        color: $gray;
+        }
+      }
+    }
+  }
+}
+
+.logout {
+background: $thin-gray !important;
+font-weight: 600 !important;
+}

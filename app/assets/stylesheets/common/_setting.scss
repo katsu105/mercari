@@ -1,7 +1,4 @@
 @import "clearfix";
-@import "font2";
-@import "font5";
-
 
 body {
   background: $main-back;
@@ -14,14 +11,6 @@ body {
 }
 .l-left {
   float: left;
-}
-
-.font-2 {
-  @include font2();
-}
-
-.font-5 {
-  @include font5();
 }
 
 a{

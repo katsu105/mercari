@@ -64,6 +64,9 @@
     line-height: 1.5;
     word-break: break-word;
     white-space: normal;
+    font-size: 16px;
+    font-weight: 400;
+    color: $black;
   }
 
   &--num {
@@ -72,6 +75,8 @@
 
   &--price {
     font-size: 20px;
+    font-weight: 600;
+    color: $black;
   }
 
   &--tax {

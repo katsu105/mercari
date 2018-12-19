@@ -8,5 +8,5 @@ Rails.application.routes.draw do
     end
   end
 
-  resources :mypage
+  resources :mypage, only: [:index]
 end

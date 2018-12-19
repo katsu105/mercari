@@ -21,3 +21,125 @@
 @import "user/logout";
 
 
+.mypage-main {
+  &__box {
+    background: $white;
+    &-title {
+      font-weight: bold;
+      font-size: 24px;
+      padding: 8px 24px;
+      text-align: center;
+      border-bottom: 1px solid $main-back;
+    }
+    &-text {
+      text-align: center;
+    }
+  }
+  &__inner {
+    padding: 64px;
+    border-top: 1px solid $main-back;
+  }
+}
+
+label {
+  display: inline-block;
+  font-weight: 600;
+}
+
+.form {
+  &-require {
+  background: $red;
+  margin: 0 0 0 8px;
+  padding: 2px 4px;
+  border-radius: 2px;
+  color: $white;
+  font-size: 12px;
+  vertical-align: top;
+  }
+  &-arbitrary {
+    background: $gray;
+    margin: 0 0 0 8px;
+    padding: 2px 4px;
+    border-radius: 2px;
+    color: $white;
+    font-size: 12px;
+    vertical-align: top;
+  }
+}
+
+.mypage-main__inner {
+  &--text {
+    margin: 8px 0 0;
+    color: #888;
+    line-height: 1.5;
+  }
+  .form-group {
+    margin: 40px 0 0;
+    &:first-child {
+      margin: 0;
+    }
+  }
+  .input-defalt {
+    width: 100%;
+    margin: 8px 0 0;
+    height: 28px;
+    padding: 10px 16px 8px;
+    border-radius: 4px;
+    border: 1px solid #ccc;
+    background: #fff;
+    line-height: 1.5;
+    font-size: 16px;
+  }
+  p {
+    margin: 8px 0 0;
+    line-height: 1.5;
+  }
+  button {
+    margin: 40px 0 0 0;
+  }
+}
+
+.birthday-select-wrap {
+  display: inline-block;
+  span {
+    margin: 0 8px;
+  }
+}
+.select-contents {
+  width: 140px;
+  display: inline-block;
+  margin: 8px 0 0;
+  position: relative;
+  background: $white;
+}
+
+.select-default {
+  position: relative;
+  z-index: 2;
+  height: 48px;
+  padding: 0 16px;
+  border-radius: 4px;
+  border: 1px solid #ccc;
+  background: 0;
+  font-size: 16px;
+  line-height: 1.5;
+  cursor: pointer;
+  width: 100%;
+}
+
+.icon-angle-down {
+  position: absolute;
+  right: 16px;
+  top: 50%;
+  z-index: 2;
+  color: #888;
+  font-size: 20px;
+  transform: translate(0, -50%);
+}
+
+.text-right {
+  text-align: right;
+  a {
+    color: $blue;
+  }
+}

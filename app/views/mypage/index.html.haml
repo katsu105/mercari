@@ -1,0 +1,138 @@
+// header
+= render partial: "config/header"
+
+%nav.bread-crumbs
+  %ul
+    %li
+      = link_to "/" do
+        %span メルカリ
+      = fa_icon 'angle-right', class: 'icon icon-angle-right'
+    %li
+      = link_to "/" do
+        %span マイページ
+      = fa_icon 'angle-right', class: 'icon icon-angle-right'
+    %li
+      = link_to "/" do
+        %span 本人確認
+
+%main.mypage-main.clearfix
+  .mypage-main__l-contents
+    .mypage-main__icon
+      = link_to "#" do
+        %figure
+          = image_tag("//static-mercari-jp-imgtr2.akamaized.net/images/member_photo_noimage_thumb.png", width: 60, height: 60)
+        %h2
+          ユーザーネームpiyopiyo
+        .mypage-main__icon--text
+          %div
+            評価
+            %span
+              0
+          %div
+            出品数
+            %span
+              0
+    
+    // お知らせ&やることリストタブ
+    %section.mypage-tab-container
+      %ul.mypage-tab-container__tabs
+        %li.mypage-tab-container__tabs--active
+          %h3
+            = link_to "#" do
+              お知らせ
+        %li.notice-contents__tab
+          %h3
+            = link_to "#" do
+              やることリスト
+      
+      // お知らせ&やることリスト本体
+      .tab-content
+        %ul.tab-content__panel.active
+          %li
+            = link_to "#" do
+              .mypage-main__list
+                %figure
+                  = image_tag('//static-mercari-jp-imgtr2.akamaized.net/images/mercari_profile.png')
+                .mypage-main__list--body
+                  .mypage-main__list--text メルカリのトレンドをチェック！♪
+                  %time
+                    = fa_icon 'calendar', class: 'icon-time'
+                    %span 10時間前
+                = fa_icon 'chevron-right', class: 'icon-arrow-right'
+          %li
+            = link_to "#" do
+              .mypage-main__list
+                %figure
+                  = image_tag('//static-mercari-jp-imgtr2.akamaized.net/images/mercari_profile.png')
+                .mypage-main__list--body
+                  .mypage-main__list--text メルカリのトレンドをチェック！♪
+                  %time
+                    = fa_icon 'calendar', class: 'icon-time'
+                    %span 10時間前
+                = fa_icon 'chevron-right', class: 'icon-arrow-right'
+          %li
+            = link_to "#" do
+              .mypage-main__list
+                %figure
+                  = image_tag('//static-mercari-jp-imgtr2.akamaized.net/images/mercari_profile.png')
+                .mypage-main__list--body
+                  .mypage-main__list--text メルカリのトレンドをチェック！♪
+                  %time
+                    = fa_icon 'calendar', class: 'icon-time'
+                    %span 10時間前
+                = fa_icon 'chevron-right', class: 'icon-arrow-right'
+          %li
+            = link_to "#" do
+              .mypage-main__list
+                %figure
+                  = image_tag('//static-mercari-jp-imgtr2.akamaized.net/images/mercari_profile.png')
+                .mypage-main__list--body
+                  .mypage-main__list--text メルカリのトレンドをチェック！♪
+                  %time
+                    = fa_icon 'calendar', class: 'icon-time'
+                    %span 10時間前
+                = fa_icon 'chevron-right', class: 'icon-arrow-right'
+          %li
+            = link_to "#" do
+              .mypage-main__list
+                %figure
+                  = image_tag('//static-mercari-jp-imgtr2.akamaized.net/images/mercari_profile.png')
+                .mypage-main__list--body
+                  .mypage-main__list--text メルカリのトレンドをチェック！♪
+                  %time
+                    = fa_icon 'calendar', class: 'icon-time'
+                    %span 10時間前
+                = fa_icon 'chevron-right', class: 'icon-arrow-right'
+          %li.mypage-main__all
+            %a 一覧を見る
+
+    // 購入した商品
+    %section.mypage-tab-container
+      %h2.mypage-tab-container__title
+        購入した商品
+      %ul.mypage-tab-container__tabs
+        %li.mypage-tab-container__tabs--active
+          %h3
+            = link_to "#" do
+              取引中
+        %li.notice-contents__tab
+          %h3
+            = link_to "#" do
+              過去の取引
+      .tab-content
+        %ul.tab-content__panel.active
+          %li.mypage-item-not-found
+            取引中の商品がありません
+  .l-side
+          
+  // sidebar
+  = render partial: "config/sidebar"
+
+// app-banner
+= render partial: "config/app-banner"
+
+//footer
+= render partial: "config/footer"
+
+//sell-btn
+= render partial: "config/sell-btn"

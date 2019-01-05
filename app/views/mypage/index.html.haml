@@ -17,165 +17,113 @@
 
 %main.mypage-main.clearfix
   .mypage-main__l-contents
-    .mypage-main__box
-      %h2.mypage-main__box-title
-        本人情報の登録
-      %p.mypage-main__box-text
-        お客さまのあんしん・あんぜんな取引のため、本人情報のご登録をお願いしております。
+    .mypage-main__icon
+      = link_to "#" do
+        %figure
+          = image_tag("//static-mercari-jp-imgtr2.akamaized.net/images/member_photo_noimage_thumb.png", width: 60, height: 60)
+        %h2
+          ユーザーネームpiyopiyo
+        .mypage-main__icon--text
+          %div
+            評価
+            %span
+              0
+          %div
+            出品数
+            %span
+              0
+    
+    // お知らせ&やることリストタブ
+    %section.mypage-tab-container
+      %ul.mypage-tab-container__tabs
+        %li.mypage-tab-container__tabs--active
+          %h3
+            = link_to "#" do
+              お知らせ
+        %li.notice-contents__tab
+          %h3
+            = link_to "#" do
+              やることリスト
       
-      %form.mypage-main__inner
-        .form-group
-          %label
-            お名前
-          %span.form-require
-            必須
-          %input{type: "text", name: "family_name_kanji", placeholder: "例)山田", class: "input-defalt"}
-          %input{type: "text", name: "family_name_kanji", placeholder: "例)彩", class: "input-defalt"}
+      // お知らせ&やることリスト本体
+      .tab-content
+        %ul.tab-content__panel.active
+          %li
+            = link_to "#" do
+              .mypage-main__list
+                %figure
+                  = image_tag('//static-mercari-jp-imgtr2.akamaized.net/images/mercari_profile.png')
+                .mypage-main__list--body
+                  .mypage-main__list--text メルカリのトレンドをチェック！♪
+                  %time
+                    = fa_icon 'calendar', class: 'icon-time'
+                    %span 10時間前
+                = fa_icon 'chevron-right', class: 'icon-arrow-right'
+          %li
+            = link_to "#" do
+              .mypage-main__list
+                %figure
+                  = image_tag('//static-mercari-jp-imgtr2.akamaized.net/images/mercari_profile.png')
+                .mypage-main__list--body
+                  .mypage-main__list--text メルカリのトレンドをチェック！♪
+                  %time
+                    = fa_icon 'calendar', class: 'icon-time'
+                    %span 10時間前
+                = fa_icon 'chevron-right', class: 'icon-arrow-right'
+          %li
+            = link_to "#" do
+              .mypage-main__list
+                %figure
+                  = image_tag('//static-mercari-jp-imgtr2.akamaized.net/images/mercari_profile.png')
+                .mypage-main__list--body
+                  .mypage-main__list--text メルカリのトレンドをチェック！♪
+                  %time
+                    = fa_icon 'calendar', class: 'icon-time'
+                    %span 10時間前
+                = fa_icon 'chevron-right', class: 'icon-arrow-right'
+          %li
+            = link_to "#" do
+              .mypage-main__list
+                %figure
+                  = image_tag('//static-mercari-jp-imgtr2.akamaized.net/images/mercari_profile.png')
+                .mypage-main__list--body
+                  .mypage-main__list--text メルカリのトレンドをチェック！♪
+                  %time
+                    = fa_icon 'calendar', class: 'icon-time'
+                    %span 10時間前
+                = fa_icon 'chevron-right', class: 'icon-arrow-right'
+          %li
+            = link_to "#" do
+              .mypage-main__list
+                %figure
+                  = image_tag('//static-mercari-jp-imgtr2.akamaized.net/images/mercari_profile.png')
+                .mypage-main__list--body
+                  .mypage-main__list--text メルカリのトレンドをチェック！♪
+                  %time
+                    = fa_icon 'calendar', class: 'icon-time'
+                    %span 10時間前
+                = fa_icon 'chevron-right', class: 'icon-arrow-right'
+          %li.mypage-main__all
+            %a 一覧を見る
 
-        .form-group
-          %label
-            お名前カナ
-          %span.form-require
-            必須
-          %input{type: "text", name: "family_name_kanji", placeholder: "例)ヤマダ", class: "input-defalt"}
-          %input{type: "text", name: "family_name_kanji", placeholder: "例)アヤ", class: "input-defalt"}
-
-        .form-group
-          %label
-            郵便番号
-          %span.form-arbitrary
-            任意
-          %input{type: "text", name: "family_name_kanji", placeholder: "例)1234567", class: "input-defalt"}
-
-        .form-group
-          %label
-            都道府県
-          %span.form-require
-            必須
-          %input{type: "text", name: "family_name_kanji", placeholder: "例)神奈川県", class: "input-defalt"}
-
-        .form-group
-          %label
-            市区町村
-          %span.form-require
-            必須
-          %input{type: "text", name: "family_name_kanji", placeholder: "例)横浜市緑区", class: "input-defalt"}
-
-        .form-group
-          %label
-            番地
-          %span.form-require
-            必須
-          %input{type: "text", name: "family_name_kanji", placeholder: "例)青山1-1-1", class: "input-defalt"}
-
-        .form-group
-          %label
-            建物名
-          %span.form-arbitrary
-            任意
-          %input{type: "text", name: "family_name_kanji", placeholder: "例)柳ビル103", class: "input-defalt"}
-
-        .form-group
-          %label
-            生年月日
-          %span.form-require
-            必須
-          %br/
-          .birthday-select-wrap
-            .select-contents
-              %select.select-default 
-                %option{value: 1900}
-                  1900                
-                %option{value: 1901}
-                  1901
-                %option{value: 1902}
-                  1902
-              = fa_icon 'angle-down', class: "icon icon-angle-down"
-
-            %span
-              年
-
-          .birthday-select-wrap
-            .select-contents
-              %select.select-default 
-                %option{value: 1}
-                  1
-                %option{value: 2}
-                  2
-                %option{value: 3}
-                  3
-                %option{value: 4}
-                  4
-                %option{value: 5}
-                  5
-                %option{value: 6}
-                  6
-                %option{value: 7}
-                  7
-                %option{value: 8}
-                  8
-                %option{value: 9}
-                  9
-                %option{value: 10}
-                  10
-                %option{value: 11}
-                  11
-                %option{value: 12}
-                  12
-              = fa_icon 'angle-down', class: "icon icon-angle-down"
-
-            %span
-              月
-
-          .birthday-select-wrap
-            .select-contents
-              %select.select-default 
-                %option{value: 1}
-                  1
-                %option{value: 2}
-                  2
-                %option{value: 3}
-                  3
-                %option{value: 4}
-                  4
-                %option{value: 5}
-                  5
-                %option{value: 6}
-                  6
-                %option{value: 7}
-                  7
-                %option{value: 8}
-                  8
-                %option{value: 9}
-                  9
-                %option{value: 10}
-                  10
-                %option{value: 11}
-                  11
-                %option{value: 12}
-                  12
-                %option{value: 13}
-                  13
-                %option{value: 14}
-                  14
-                %option{value: 15}
-                  15
-              = fa_icon 'angle-down', class: "icon icon-angle-down"
-
-            %span
-              日
-
-          %p.mypage-main__inner--text
-            ※出品されたことがある、本人情報未登録のお客さまもご対象となります。
-
-          %button.btn-default.btn-red
-            登録する
-
-          .form-group.text-right
-            %p
-              = link_to "/" do
-                本人情報の登録について
-              = fa_icon 'angle-right', class: "icon icon-angle-right"
+    // 購入した商品
+    %section.mypage-tab-container
+      %h2.mypage-tab-container__title
+        購入した商品
+      %ul.mypage-tab-container__tabs
+        %li.mypage-tab-container__tabs--active
+          %h3
+            = link_to "#" do
+              取引中
+        %li.notice-contents__tab
+          %h3
+            = link_to "#" do
+              過去の取引
+      .tab-content
+        %ul.tab-content__panel.active
+          %li.mypage-item-not-found
+            取引中の商品がありません
+  .l-side
           
   // sidebar
   = render partial: "config/sidebar"

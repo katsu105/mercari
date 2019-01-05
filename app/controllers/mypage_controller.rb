@@ -4,4 +4,7 @@ class MypageController < ApplicationController
   
   def edit
   end
+
+  def profile
+  end
 end

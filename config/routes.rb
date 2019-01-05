@@ -9,5 +9,8 @@ Rails.application.routes.draw do
   end
 
   resources :mypage, only: [:index, :edit] do
+    collection do
+      get :profile
+    end
   end
 end

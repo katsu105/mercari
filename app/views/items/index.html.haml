@@ -32,51 +32,16 @@
     %h3.main__items--center-text
       レディース新着アイテム
     .main__items-container.clearfix
+    - @items.each do |item|
       .main__items-box
         .main__items-box--img
-          = image_tag("https://static-mercari-jp-imgtr2.akamaized.net/thumb/photos/m96316226986_1.jpg?1543710468", class: "box--image")
+          = image_tag("#{item.image}", class: "box--image")
         .main__items-box--text
           %h3.main__items-box--title
-            タイトル
+            = item.name
           .main__items-box--num.clearfix
             .main__items-box--price.l-left
-              ¥8888
-            %p.main__items-box--tax
-              (税込)
-
-      .main__items-box
-        .main__items-box--img
-          = image_tag("https://static-mercari-jp-imgtr2.akamaized.net/thumb/photos/m96316226986_1.jpg?1543710468", class: "box--image")
-        .main__items-box--text
-          %h3.main__items-box--title
-            タイトル
-          .main__items-box--num.clearfix
-            .main__items-box--price.l-left
-              ¥3500
-            %p.main__items-box--tax
-              (税込)
-
-      .main__items-box
-        .main__items-box--img
-          = image_tag("https://static-mercari-jp-imgtr2.akamaized.net/thumb/photos/m96316226986_1.jpg?1543710468", class: "box--image")
-        .main__items-box--text
-          %h3.main__items-box--title
-            タイトル
-          .main__items-box--num.clearfix
-            .main__items-box--price.l-left
-              ¥3500
-            %p.main__items-box--tax
-              (税込)
-
-      .main__items-box
-        .main__items-box--img
-          = image_tag("https://static-mercari-jp-imgtr2.akamaized.net/thumb/photos/m96316226986_1.jpg?1543710468", class: "box--image")
-        .main__items-box--text
-          %h3.main__items-box--title
-            タイトル
-          .main__items-box--num.clearfix
-            .main__items-box--price.l-left
-              ¥3500
+              = item.price
             %p.main__items-box--tax
               (税込)
 

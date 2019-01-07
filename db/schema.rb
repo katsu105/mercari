@@ -10,11 +10,11 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20190107045002) do
+ActiveRecord::Schema.define(version: 20190107092140) do
 
   create_table "items", force: :cascade, options: "ENGINE=InnoDB DEFAULT CHARSET=utf8" do |t|
     t.string   "name",                     null: false
-    t.string   "text",                     null: false
+    t.text     "text",       limit: 65535, null: false
     t.text     "image",      limit: 65535
     t.string   "price"
     t.datetime "created_at",               null: false

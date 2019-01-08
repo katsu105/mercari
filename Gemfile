@@ -76,3 +76,6 @@ gem 'carrierwave'
 gem 'fog-aws'
 gem 'mini_magick'
 
+#テストで導入
+gem 'rails-controller-testing'
+

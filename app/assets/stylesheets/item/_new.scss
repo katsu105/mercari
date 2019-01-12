@@ -1,0 +1,132 @@
+.sell-up {
+  border-top: 1px solid $thin-gray;
+  &__box {
+    width: 620px;
+    padding: 40px;
+  }
+  &__title {
+    font-size: 16px;
+    font-weight: bold;
+    &+p {
+      margin: 8px 0 0;
+      line-height: 1.5;
+    }
+  }
+}
+
+.sell-drop {
+  display: block;
+  width: 620px;
+  margin: 16px auto 0;
+  &__box {
+    width: 620px;
+    margin-left: 0;
+    float: left;
+
+    position: relative;
+    height: 140px;
+    background: $main-back;
+    border: 1px dashed $gray;
+    font-size: 0;
+    text-align: center;
+    &--text {
+      font-weight: bold;
+      position: absolute;
+      top: 50%;
+      left: 16px;
+      right: 16px;
+      text-align: center;
+      font-size: 14px;
+      line-height: 1.5;
+      transform: translate(0, -50%);
+      pointer-events: none;
+      white-space: pre-wrap;
+      word-wrap: break-word;
+    }
+  }
+  
+}
+
+.sell-content {
+  padding: 40px;
+  border-top: 1px solid $thin-gray;
+  .input-default {
+    width: 100%;
+    margin: 8px 0 0;
+  }
+  .form-group:first-child {
+    margin: 0;
+  }
+  .form-group {
+    margin-top: 40px;
+  }
+}
+
+.sell-content {
+  
+ 
+  &__box {
+    float: right;
+    width: 400px;
+    margin: 0;
+  } 
+  &__price {
+    &>li:first-child {
+      padding: 0 0 24px;
+      border: 0;
+    }
+    &>li {
+      padding: 24px 0;
+      border-top: 1px solid $gray;
+    }
+    &--title {
+      width: 50%;
+      line-height: 48px;
+      float: left;
+    }
+    &--input {
+      width: 50%;
+      text-align: right;
+      float: right;
+      div {
+        display: inline-block;
+        width: 80%;
+        margin: 0 0 0 5%;
+      }
+    }
+  }
+}
+
+li.clearfix {
+  .sell-content__price--title {
+    width: 50%;
+    line-height: 18px;
+    float: left;
+  }
+}
+
+.select-wrap {
+  margin: 8px 0 0;
+  position: relative;
+  background: $white;
+}
+
+.l-right {
+  float: right;
+}
+
+.sell-btn-box {
+  .btn-red {
+    margin: 40px 0 0;
+  }
+  .btn-gray {
+    width: 45%;
+    margin: 24px auto 0;
+  }
+}
+
+.btn-gray {
+  background: #aaa;
+  border: 1px solid #aaa;
+  color: $white;
+}

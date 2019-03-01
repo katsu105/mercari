@@ -18,11 +18,11 @@
   display: block;
   width: 620px;
   margin: 16px auto 0;
+  
   &__box {
     width: 620px;
     margin-left: 0;
     float: left;
-
     position: relative;
     height: 140px;
     background: $main-back;
@@ -30,8 +30,6 @@
     font-size: 0;
     text-align: center;
     &--text {
-      font-weight: bold;
-      position: absolute;
       top: 50%;
       left: 16px;
       right: 16px;
@@ -42,9 +40,13 @@
       pointer-events: none;
       white-space: pre-wrap;
       word-wrap: break-word;
+      font-weight: bold;
     }
-  }
-  
+  } 
+}
+
+.none {
+  display: none;
 }
 
 .sell-content {

@@ -14,3 +14,26 @@
 //= require jquery_ujs
 //= require turbolinks
 //= require_tree .
+
+
+// $(window).load(function() {
+//   var f_label = $("label:first-child")
+//   var f_text = $(".sell-drop__box--text:first")
+//   f_label.removeClass("none")
+//   f_text.removeClass("none")
+// });
+
+// $(document).click(function() {
+//   console.log('hoge')
+// });
+
+$(document).on('change', 'input[type="file"]', function() {
+  // console.log('hoge')
+  // var f_label = $("label:first-child")
+  // var f_text = $(".sell-drop__box--text:first")
+  // $(this).children().removeClass("none")
+  // console.log($(this).children())
+  // inputに入った時に次のlabelとtextにnoneのクラスがつく
+  // 次のlabelとtextの取り方がわからない
+  // thisで取れれば理想的だが、documentでないとイベントが取れない
+});

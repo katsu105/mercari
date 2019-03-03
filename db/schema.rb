@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20190301022316) do
+ActiveRecord::Schema.define(version: 20190303032135) do
 
   create_table "categories", force: :cascade, options: "ENGINE=InnoDB DEFAULT CHARSET=utf8" do |t|
     t.string   "name"
@@ -40,16 +40,12 @@ ActiveRecord::Schema.define(version: 20190301022316) do
     t.string   "price"
     t.datetime "created_at",                  null: false
     t.datetime "updated_at",                  null: false
-    t.integer  "l_category_id",               null: false
-    t.integer  "m_category_id",               null: false
-    t.integer  "s_category_id",               null: false
     t.integer  "status",                      null: false
     t.integer  "shipping_cost",               null: false
     t.integer  "prefectures",                 null: false
     t.integer  "ship_date",                   null: false
-    t.index ["l_category_id"], name: "index_items_on_l_category_id", using: :btree
-    t.index ["m_category_id"], name: "index_items_on_m_category_id", using: :btree
-    t.index ["s_category_id"], name: "index_items_on_s_category_id", using: :btree
+    t.integer  "category_id"
+    t.index ["category_id"], name: "index_items_on_category_id", using: :btree
   end
 
   create_table "users", force: :cascade, options: "ENGINE=InnoDB DEFAULT CHARSET=utf8" do |t|
@@ -65,4 +61,5 @@ ActiveRecord::Schema.define(version: 20190301022316) do
   end
 
   add_foreign_key "images", "items"
+  add_foreign_key "items", "categories"
 end

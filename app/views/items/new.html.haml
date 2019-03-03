@@ -42,23 +42,24 @@
             .sell-content__box
               .form-group
                 %label
-                  大カテゴリー
+                  カテゴリー
                   %span.form-require
                     必須
-                %div
+                #cat
                   .select-wrap
-                    = f.select :l_category_id, Item.l_category_ids_i18n.invert, {prompt: "---"}, class: "select-default" 
-                    = fa_icon 'angle-down', class: "icon icon-angle-down"
+                    -# = f.select :l_category_id, Item.l_category_ids_i18n.invert, {prompt: "---"}, class: "select-default" 
+                    = f.select :category_id, Category.roots.map {|i| ["#{i.name}", i.id]}, { selected: @item.category_id, include_blank: true }, {id: "l_category", class: "select-default"}
+                    = fa_icon 'angle-down', class: "icon icon-angle-down", id: "cat-icon"
               
-                %div
-                  .select-wrap
-                    = f.select :m_category_id, Item.m_category_ids_i18n.invert, {prompt: "---"}, class: "select-default" 
-                    = fa_icon 'angle-down', class: "icon icon-angle-down"
+                -# %div
+                -#   .select-wrap
+                -#     = f.select :m_category_id, Item.m_category_ids_i18n.invert, {prompt: "---"}, class: "select-default" 
+                -#     = fa_icon 'angle-down', class: "icon icon-angle-down"
 
-                %div
-                  .select-wrap
-                    = f.select :s_category_id, Item.s_category_ids_i18n.invert, {prompt: "---"}, class: "select-default" 
-                    = fa_icon 'angle-down', class: "icon icon-angle-down"
+                -# %div
+                -#   .select-wrap
+                -#     = f.select :s_category_id, Item.s_category_ids_i18n.invert, {prompt: "---"}, class: "select-default" 
+                -#     = fa_icon 'angle-down', class: "icon icon-angle-down"
               
               .form-group
                 %label

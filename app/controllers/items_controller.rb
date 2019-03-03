@@ -13,7 +13,22 @@ class ItemsController < ApplicationController
     @item = Item.new(item_params)
     @item.save
     
+    binding.pry
+    
     redirect_to new_item_path
+  end
+
+  def search
+    if params[:l_cat]
+      @m_cat = Category.find(params[:l_cat]).children
+    else
+      @s_cat = Category.find(params[:m_cat]).children
+    end
+
+    respond_to do |format|
+      format.html
+      format.json
+    end
   end
 
   private
@@ -23,9 +38,7 @@ class ItemsController < ApplicationController
       :name, 
       :text, 
       :price, 
-      :l_category_id,
-      :m_category_id, 
-      :s_category_id, 
+      :category_id, 
       :status,
       :shipping_cost, 
       :prefectures, 

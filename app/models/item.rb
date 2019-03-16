@@ -1,7 +1,4 @@
 class Item < ApplicationRecord
-  enum l_category_id: [:women, :mens, :kids]
-  enum m_category_id: [:outer, :tops]
-  enum s_category_id: [:jacket, :pants, :skirt]
   enum status: [:unused, :c_new, :n_dirt, :l_dirt, :dirt, :bad]
   enum shipping_cost: [:seller, :buyer]
   enum prefectures:[:hokkaido, :aomori, :iwate, :miyagi, :akita]
@@ -11,6 +8,7 @@ class Item < ApplicationRecord
   belongs_to :category
   accepts_nested_attributes_for :images
 
-
   mount_uploaders :image, ImageUploader
+
+  validates :nickname, presence: true
 end

@@ -47,19 +47,8 @@
                     必須
                 #cat
                   .select-wrap
-                    -# = f.select :l_category_id, Item.l_category_ids_i18n.invert, {prompt: "---"}, class: "select-default" 
                     = f.select :category_id, Category.roots.map {|i| ["#{i.name}", i.id]}, { selected: @item.category_id, include_blank: true }, {id: "l_category", class: "select-default"}
                     = fa_icon 'angle-down', class: "icon icon-angle-down", id: "cat-icon"
-              
-                -# %div
-                -#   .select-wrap
-                -#     = f.select :m_category_id, Item.m_category_ids_i18n.invert, {prompt: "---"}, class: "select-default" 
-                -#     = fa_icon 'angle-down', class: "icon icon-angle-down"
-
-                -# %div
-                -#   .select-wrap
-                -#     = f.select :s_category_id, Item.s_category_ids_i18n.invert, {prompt: "---"}, class: "select-default" 
-                -#     = fa_icon 'angle-down', class: "icon icon-angle-down"
               
               .form-group
                 %label
@@ -82,7 +71,27 @@
                     必須
                 %div
                   .select-wrap
-                    = f.select :shipping_cost, Item.shipping_costs_i18n.invert, {prompt: "---"}, {class: "select-default"}
+                    = f.select :shipping_cost, Shipping_cost.all.map{|i| ["#{i.name}", i.id] }, {prompt: "---"}, {class: "select-default", id: "s_cost"}
+                    = fa_icon 'angle-down', class: "icon icon-angle-down"
+                  
+              .form-group#s_method_all.none
+                %label
+                  配送の方法
+                  %span.form-require
+                    必須
+                %div
+                  .select-wrap
+                    = f.select :shipping_cost, Shipping_method.all.map{|i| ["#{i.name}", i.id] }, {prompt: "---"}, {class: "select-default"}
+                    = fa_icon 'angle-down', class: "icon icon-angle-down"
+
+              .form-group#s_method_part.none
+                %label
+                  配送の方法
+                  %span.form-require
+                    必須
+                %div
+                  .select-wrap
+                    = f.select :shipping_cost, @shipping_method_part.map{|i| ["#{i.name}", i.id] }, {prompt: "---"}, {class: "select-default"}
                     = fa_icon 'angle-down', class: "icon icon-angle-down"
 
               .form-group

@@ -81,7 +81,7 @@
                     必須
                 %div
                   .select-wrap
-                    = f.select :shipping_cost, Shipping_method.all.map{|i| ["#{i.name}", i.id] }, {prompt: "---"}, {class: "select-default"}
+                    = f.select :shipping_method, Shipping_method.all.map{|i| ["#{i.name}", i.id] }, {prompt: "---"}, {class: "select-default"}
                     = fa_icon 'angle-down', class: "icon icon-angle-down"
 
               .form-group#s_method_part.none
@@ -91,7 +91,7 @@
                     必須
                 %div
                   .select-wrap
-                    = f.select :shipping_cost, @shipping_method_part.map{|i| ["#{i.name}", i.id] }, {prompt: "---"}, {class: "select-default"}
+                    = f.select :shipping_method, @shipping_method_part.map{|i| ["#{i.name}", i.id] }, {prompt: "---"}, {class: "select-default"}
                     = fa_icon 'angle-down', class: "icon icon-angle-down"
 
               .form-group
@@ -101,7 +101,7 @@
                     必須
                 %div
                   .select-wrap
-                    = f.select :prefectures, Item.prefectures_i18n.invert, {prompt: "---"}, {class: "select-default"}
+                    = f.select :prefectures, JpPrefecture::Prefecture.all.map{|i| ["#{i.name}"]}, {prompt: "---"}, {class: "select-default"}
                     = fa_icon 'angle-down', class: "icon icon-angle-down"
 
               .form-group

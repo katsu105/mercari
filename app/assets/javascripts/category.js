@@ -47,7 +47,6 @@ $(document).on('turbolinks:load', function() {
   // Lカテゴリーが選択された時のアクション
   $("#l_category").on('change', function() {
     l_cat = $(this).val()
-    console.log($(this))
     $("#add-Mcat, #add-Scat").remove()
 
     // ajaxでリクエストを送信

@@ -35,7 +35,8 @@
     - @items.each do |item|
       .main__items-box
         .main__items-box--img
-          = image_tag("#{item.image}", class: "box--image")
+          - if (item.images.length != 0)
+            = image_tag("#{item.images[0].image[0].url}", class: "box--image")
         .main__items-box--text
           %h3.main__items-box--title
             = item.name

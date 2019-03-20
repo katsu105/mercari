@@ -49,6 +49,9 @@ group :development, :test do
   gem 'capistrano3-unicorn'
   gem 'rspec-rails'
   gem 'factory_bot_rails'
+  gem 'pry-rails'
+  gem 'pry-byebug'
+  gem 'pry-doc'
 end
 
 group :development do
@@ -79,3 +82,9 @@ gem 'mini_magick'
 #テストで導入
 gem 'rails-controller-testing'
 
+gem 'enum_help'
+gem 'dropzonejs-rails'
+gem 'awesome_nested_set'
+gem 'jquery-rails'
+gem 'active_hash'
+gem 'jp_prefecture'

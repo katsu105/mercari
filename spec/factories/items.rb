@@ -1,8 +1,14 @@
 FactoryBot.define do
   factory :item do
-    name "積み木"
-    text "子供が使わなくなったおもちゃです"
-    image "hoge.png"
-    price 1000
+    id               {1}
+    name             {"タンクトップ"}
+    text             {"古着のタンクトップです。"}
+    status           {"unused"}
+    shipping_cost    {"2"}
+    shipping_method  {"8"}
+    prefectures      {"青森県"}
+    ship_date        {"two_three"}
+    price            {"1000"}
+    category
   end
 end

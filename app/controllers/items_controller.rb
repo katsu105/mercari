@@ -13,9 +13,6 @@ class ItemsController < ApplicationController
   def create
     @item = Item.new(item_params)
     @item.save
-    
-    binding.pry
-    
     redirect_to new_item_path
   end
 
@@ -41,7 +38,8 @@ class ItemsController < ApplicationController
       :price, 
       :category_id, 
       :status,
-      :shipping_cost, 
+      :shipping_cost,
+      :shipping_method, 
       :prefectures, 
       :ship_date,
       images_attributes: {image: []}

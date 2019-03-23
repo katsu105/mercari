@@ -2,49 +2,41 @@ $(document).on('turbolinks:load', function() {
 
   var cat_seach = $("#cat");
 
-  function appendMselect() {
+  function appendSelect(catNum) {
+    if(catNum == 1) {
+      var contents_id = `add-Mcat`
+      var select_id = `m_category`
+    } else if(catNum == 2) {
+      var contents_id = `add-Scat`
+      var select_id = `s_category`
+    }
     var html =  
-    `<div class="select-wrap" id="add-Mcat">
-      <select name="item[category_id]" id="m_category" class="select-default">
-          <option value>---</option>
-      </select>
-      <i class="fa fa-angle-down icon icon-angle-down"></i>
-    </div>`
+      `<div class="select-wrap" id="${contents_id}">
+        <select name="item[category_id]" id="${select_id}" class="select-default">
+            <option value>---</option>
+        </select>
+        <i class="fa fa-angle-down icon icon-angle-down"></i>
+      </div>`
     cat_seach.append(html)
   }
 
-  function appendSselect() {
-    var html =  
-    `<div class="select-wrap" id="add-Scat">
-      <select name="item[category_id]" id="s_category" class="select-default">
-          <option value>---</option>
-      </select>
-      <i class="fa fa-angle-down icon icon-angle-down"></i>
-    </div>`
-    cat_seach.append(html)
-  }
-
-  // optionタグを追加
-  function appendMcat(m_cat) {
-    $("#m_category").append(
+  // optionを追加
+  function appendCat(catOption, catNum) {
+    if (catNum == 1) {
+      var appendId = $("#m_category")
+    } else if (catNum == 2) {
+      var appendId = $("#s_category")
+    }
+    appendId.append(
       $("<option>")
-        .val($(m_cat).attr('id'))
-        .text($(m_cat).attr('name'))
-    )
-  }
-
-  function appendScat(s_cat) {
-    $("#s_category").append(
-      $("<option>")
-        .val($(s_cat).attr('id'))
-        .text($(s_cat).attr('name'))
+        .val($(catOption).attr('id'))
+        .text($(catOption).attr('name'))
     )
   }
 
   // Lカテゴリーが選択された時のアクション
   $("#l_category").on('change', function() {
     l_cat = $(this).val()
-    console.log($(this))
     $("#add-Mcat, #add-Scat").remove()
 
       $.ajax({
@@ -53,10 +45,12 @@ $(document).on('turbolinks:load', function() {
         data: {l_cat: l_cat},
         dataType: 'json'
       })
+      
       .done(function(m_cat) {
-        appendMselect()
+        var catNum = 1
+        appendSelect(catNum)
         m_cat.forEach(function(m_cat) {
-          appendMcat(m_cat)
+          appendCat(m_cat, catNum)
         })
       })
     })
@@ -66,7 +60,6 @@ $(document).on('turbolinks:load', function() {
     m_cat = $(this).val()
     $("#add-Scat").remove()
     
-  
     $.ajax({
       type: "GET",
       url: "/items/search",
@@ -74,9 +67,10 @@ $(document).on('turbolinks:load', function() {
       dataType: 'json'
     })
     .done(function(s_cat) {
-      appendSselect()
+      var catNum = 2
+      appendSelect(catNum)
       s_cat.forEach(function(s_cat) {
-        appendScat(s_cat)
+        appendCat(s_cat, catNum)
       })
     })
   })

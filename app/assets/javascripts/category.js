@@ -1,6 +1,5 @@
 $(document).on('turbolinks:load', function() {
 
-  // Mカテゴリーのselectを追加するHTML
   var cat_seach = $("#cat");
 
   function appendMselect() {
@@ -14,7 +13,6 @@ $(document).on('turbolinks:load', function() {
     cat_seach.append(html)
   }
 
-  // Sカテゴリーのselectを追加するHTML
   function appendSselect() {
     var html =  
     `<div class="select-wrap" id="add-Scat">
@@ -26,7 +24,7 @@ $(document).on('turbolinks:load', function() {
     cat_seach.append(html)
   }
 
-  // Mカテゴリーのoptionを追加するHTML
+  // optionタグを追加
   function appendMcat(m_cat) {
     $("#m_category").append(
       $("<option>")
@@ -35,7 +33,6 @@ $(document).on('turbolinks:load', function() {
     )
   }
 
-  // Sカテゴリーのoptionを追加するHTML
   function appendScat(s_cat) {
     $("#s_category").append(
       $("<option>")
@@ -50,14 +47,12 @@ $(document).on('turbolinks:load', function() {
     console.log($(this))
     $("#add-Mcat, #add-Scat").remove()
 
-    // ajaxでリクエストを送信
       $.ajax({
         type: "GET",
         url: "/items/search",
         data: {l_cat: l_cat},
         dataType: 'json'
       })
-      // doneメソッドでappendする
       .done(function(m_cat) {
         appendMselect()
         m_cat.forEach(function(m_cat) {

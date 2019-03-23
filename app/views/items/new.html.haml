@@ -29,12 +29,16 @@
                 必須
               %div
                 = f.text_field :name, class: "input-default", placeholder: "商品名（必須 40文字まで)"
-              
+                - if @item.errors[:name].any?
+                  = render partial: "config/error-text"
+
             .form-group
               = f.label :name, "商品の説明"
               %span.form-require
                 必須
             = f.text_area :text, class: "textarea-default", placeholder: "商品の説明（必須 1,000文字以内）（色、素材、重さ、定価、注意点など）例）2010年頃に1万円で購入したジャケットです。ライトグレーで傷はありません。あわせやすいのでおすすめです。"
+            - if @item.errors[:text].any?
+              = render partial: "config/error-text"
 
           .sell-content.clearfix
             %h3.sell-content__title
@@ -47,18 +51,10 @@
                     必須
                 %div
                   .select-wrap
-                    = f.select :l_category_id, Item.l_category_ids_i18n.invert, {prompt: "---"}, class: "select-default" 
+                    = f.select :category_id, Item.l_category_ids_i18n.invert, {prompt: "---"}, class: "select-default" 
                     = fa_icon 'angle-down', class: "icon icon-angle-down"
-              
-                %div
-                  .select-wrap
-                    = f.select :m_category_id, Item.m_category_ids_i18n.invert, {prompt: "---"}, class: "select-default" 
-                    = fa_icon 'angle-down', class: "icon icon-angle-down"
-
-                %div
-                  .select-wrap
-                    = f.select :s_category_id, Item.s_category_ids_i18n.invert, {prompt: "---"}, class: "select-default" 
-                    = fa_icon 'angle-down', class: "icon icon-angle-down"
+                    - if @item.errors[:category_id].any?
+                      = render partial: "config/error-select"
               
               .form-group
                 %label
@@ -69,6 +65,8 @@
                   .select-wrap
                     = f.select :status, Item.statuses_i18n.invert, {prompt: "---"}, class: "select-default" , placeholder: 0
                     = fa_icon 'angle-down', class: "icon icon-angle-down"
+                    - if @item.errors[:status].any?
+                      = render partial: "config/error-select"
 
           .sell-content.clearfix
             %h3.sell-content__title
@@ -83,6 +81,8 @@
                   .select-wrap
                     = f.select :shipping_cost, Item.shipping_costs_i18n.invert, {prompt: "---"}, {class: "select-default"}
                     = fa_icon 'angle-down', class: "icon icon-angle-down"
+                    - if @item.errors[:shipping_cost].any?
+                      = render partial: "config/error-select"
 
               .form-group
                 %label
@@ -93,6 +93,8 @@
                   .select-wrap
                     = f.select :prefectures, Item.prefectures_i18n.invert, {prompt: "---"}, {class: "select-default"}
                     = fa_icon 'angle-down', class: "icon icon-angle-down"
+                    - if @item.errors[:prefectures].any?
+                      = render partial: "config/error-select"
 
               .form-group
                 %label
@@ -103,6 +105,8 @@
                   .select-wrap
                     = f.select :ship_date, Item.ship_dates_i18n.invert, {prompt: "---"}, {class: "select-default"}
                     = fa_icon 'angle-down', class: "icon icon-angle-down"
+                    - if @item.errors[:ship_date].any?
+                      = render partial: "config/error-select"
 
               
           .sell-content.clearfix
@@ -121,6 +125,8 @@
                       ¥
                       %div
                         = f.text_field :price, class: "input-default", placeholder: "例)300"
+                        - if @item.errors[:price].any?
+                          = render partial: "config/error-text"
                       
                 %li.clearfix
                   .sell-content__price--title

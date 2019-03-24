@@ -115,7 +115,7 @@
                     必須
                 %div
                   .select-wrap
-                    = f.select :prefectures, Item.prefectures_i18n.invert, {prompt: "---"}, {class: "select-default"}
+                    = f.select :prefectures, JpPrefecture::Prefecture.all.map{|i| ["#{i.name}"]}, {prompt: "---"}, {class: "select-default"}
                     = fa_icon 'angle-down', class: "icon icon-angle-down"
                     - if @item.errors[:prefectures].any?
                       = render partial: "config/error-select"

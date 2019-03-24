@@ -7,6 +7,7 @@ class ItemsController < ApplicationController
   def new
     @item = Item.new
     @item.images.build
+    @shipping_method_part = Shipping_method.find [1,7,8,3]
   end
 
   def create

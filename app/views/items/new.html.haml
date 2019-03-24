@@ -104,6 +104,7 @@
                 %div
                   .select-wrap
                     = f.select :shipping_cost, @shipping_method_part.map{|i| ["#{i.name}", i.id] }, {prompt: "---"}, {class: "select-default"}
+                    = fa_icon 'angle-down', class: "icon icon-angle-down"
                     - if @item.errors[:shipping_method].any?
                       = render partial: "config/error-select"
 

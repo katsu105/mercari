@@ -8,6 +8,7 @@ class Item < ApplicationRecord
   enum ship_date: [:one_two, :two_three, :four_seven]
 
   has_many :images, inverse_of: :item,  :dependent => :destroy
+  belongs_to :category
   accepts_nested_attributes_for :images
 
   mount_uploaders :image, ImageUploader

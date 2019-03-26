@@ -4,7 +4,7 @@ $(function() {
     $("#s_method_all, #s_method_part").addClass("none")
       if(s_cost == 1) {
         $("#s_method_all").removeClass("none")
-        $("#s_method_part").attr("name", "")
+        $("#removeName").attr("name", "")
       }
       else {
         $("#s_method_part").removeClass("none")

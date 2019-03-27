@@ -2,11 +2,13 @@ Rails.application.routes.draw do
   devise_for :users
   root 'items#index'
 
-  resources :items, only: [:new, :create] do
+  resources :items, only: [:new] do
     collection do
       get 'search'
     end
   end
+
+  post 'items/new' => 'items#create' 
 
   resources :users do
     collection do

@@ -5,7 +5,7 @@
       .sell-contents
         %h2.single-main__title
           商品の情報を入力
-        = form_for @item, html: {class: "sell-up"} do |f|
+        = form_for @item, url: '/items/new', html: {class: "sell-up"} do |f|
           .sell-up__box
             %h3.sell-up__title
               出品画像
@@ -14,7 +14,7 @@
             %p
               最大10枚までアップロードできます。
             
-            .sell-drop.clearfix            
+            .sell-drop.clearfix
               = f.fields_for :images do |c|
                 = c.label :image, class: "sell-drop__box"
                 = c.file_field :image, multiple: true, class: "none";

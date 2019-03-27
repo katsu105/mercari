@@ -15,6 +15,8 @@ class ItemsController < ApplicationController
     if @item.save
       redirect_to new_item_path
     else
+      @shipping_method_part = Shipping_method.find [1,7,8,3]
+      @item.images.build
       render :new
     end
   end

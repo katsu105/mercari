@@ -3,7 +3,6 @@ class CreateImages < ActiveRecord::Migration[5.0]
     create_table :images do |t|
       t.references :item, foreign_key: true
       t.json :image
-      t.timestamps
     end
   end
 end

@@ -46,13 +46,13 @@
             .sell-content__box
               .form-group
                 %label
-                  大カテゴリー
+                  カテゴリー
                   %span.form-require
                     必須
-                %div
+                #cat
                   .select-wrap
-                    = f.select :category_id, Item.l_category_ids_i18n.invert, {prompt: "---"}, class: "select-default" 
-                    = fa_icon 'angle-down', class: "icon icon-angle-down"
+                    = f.select :category_id, Category.roots.map {|i| ["#{i.name}", i.id]}, { selected: @item.category_id, include_blank: true }, {id: "l_category", class: "select-default"}
+                    = fa_icon 'angle-down', class: "icon icon-angle-down", id: "cat-icon"
                     - if @item.errors[:category_id].any?
                       = render partial: "config/error-select"
               
@@ -91,7 +91,7 @@
                     必須
                 %div
                   .select-wrap
-                    = f.select :shipping_method, Shipping_method.all.map{|i| ["#{i.name}", i.id] }, {prompt: "---"}, {class: "select-default"}
+                    = f.select :shipping_method, Shipping_method.all.map{|i| ["#{i.name}"] }, {prompt: "---"}, {class: "select-default"}
                     = fa_icon 'angle-down', class: "icon icon-angle-down"
                     - if @item.errors[:shipping_metod].any?
                       = render partial: "config/error-select"
@@ -103,7 +103,7 @@
                     必須
                 %div
                   .select-wrap
-                    = f.select :shipping_cost, @shipping_method_part.map{|i| ["#{i.name}", i.id] }, {prompt: "---"}, {class: "select-default"}
+                    = f.select :shipping_method, @shipping_method_part.map{|i| ["#{i.name}"] }, {prompt: "---"}, {class: "select-default",id: "removeName"}
                     = fa_icon 'angle-down', class: "icon icon-angle-down"
                     - if @item.errors[:shipping_method].any?
                       = render partial: "config/error-select"

@@ -2,32 +2,12 @@
 ja:
   enums:
     item:
-      l_category_id:
-        women: "レディース"
-        men: "メンズ"
-        kids: "キッズ・ベビー"
-      m_category_id:
-        outer: "アウター"
-        tops: "トップス"
-      s_category_id:
-        jacket: "ジャケット"
-        pants: "パンツ"
-        skirt: "スカート" 
       status:
         unused: "新品、未使用"
         c_new: "未使用に近い"
         n_dirt: "目立った傷や汚れなし"
         l_dirt: "やや傷や汚れあり"
         dirt: "全体的に状態が悪い"
-      shipping_cost:
-        seller: "送料込み(出品者負担)"
-        buyer: "着払い(購入者負担)"
-      prefectures:
-        hokkaido: "北海道"
-        aomori: "青森県"
-        iwate: "岩手県"
-        miyagi: "宮城県"
-        akita: "秋田県"
       ship_date:
         one_two: "1~2日で発送"
         two_three: "2~3日で発送"

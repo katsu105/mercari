@@ -44,8 +44,8 @@ ActiveRecord::Schema.define(version: 20190303032135) do
     t.integer  "shipping_cost",                 null: false
     t.string   "prefectures",                   null: false
     t.integer  "ship_date",                     null: false
-    t.integer  "category_id"
     t.string   "shipping_method"
+    t.integer  "category_id"
     t.index ["category_id"], name: "index_items_on_category_id", using: :btree
   end
 

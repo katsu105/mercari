@@ -35,15 +35,16 @@ ActiveRecord::Schema.define(version: 20190303032135) do
   end
 
   create_table "items", force: :cascade, options: "ENGINE=InnoDB DEFAULT CHARSET=utf8" do |t|
-    t.string   "name",                        null: false
-    t.text     "text",          limit: 65535, null: false
+    t.string   "name",                          null: false
+    t.text     "text",            limit: 65535, null: false
     t.string   "price"
-    t.datetime "created_at",                  null: false
-    t.datetime "updated_at",                  null: false
-    t.integer  "status",                      null: false
-    t.integer  "shipping_cost",               null: false
-    t.integer  "prefectures",                 null: false
-    t.integer  "ship_date",                   null: false
+    t.datetime "created_at",                    null: false
+    t.datetime "updated_at",                    null: false
+    t.integer  "status",                        null: false
+    t.integer  "shipping_cost",                 null: false
+    t.integer  "shipping_method",               null: false
+    t.integer  "prefectures",                   null: false
+    t.integer  "ship_date",                     null: false
     t.integer  "category_id"
     t.index ["category_id"], name: "index_items_on_category_id", using: :btree
   end
